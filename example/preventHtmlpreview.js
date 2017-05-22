@@ -10,6 +10,7 @@ function loadJs(arr){
 function deep(arr,i,len){
 	var script = document.createElement("script");
 	script.src = arr[i];
+	script.type = "text/javascript";
 	document.head.appendChild(script)
 	script.onload = function(arr,i,len){
 		if(i < len - 1){

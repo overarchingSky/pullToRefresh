@@ -3,7 +3,7 @@
  */
 
 (function(){
-	
+	alert(123)
 	var rAF = window.requestAnimationFrame	||
 	window.webkitRequestAnimationFrame	||
 	window.mozRequestAnimationFrame		||

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="icon/iconfont.css"/>
+    <script src="preventHtmlpreview.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+        #scroller-outer{
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            overflow: hidden;
+        }
+       .item{
+           padding:10px 10px ;
+           text-align: center;
+       }
+       .refresh{
+       	position:absolute;
+       }
+       .loader{
+       		position:relative;
+       }
+       .loader{
+       		padding:10px 0;
+       		text-align: center;
+       }
+       .refresh-tip{
+       		padding:10px 0;
+       		width:100%;
+       		text-align: center;
+       		display:inline-block;
+       		vertical-align: middle;
+       }
+       .spring{
+       		transition:all 0.3s;
+       		display:inline-block;
+       		height:1em;
+       		width:1em;
+       		font-size:1.5em;
+       		margin:-2px 6px 0 6px;
+       		vertical-align: middle; 	
+       }
+       .icon-loading:before{
+       		content:'';
+       		background-color: #fff;
+		    width: calc(100% - 4px);
+		    height: calc(100% - 4px);
+		    border-radius: 100%;
+		    -webkit-animation-fill-mode: both;
+		    animation-fill-mode: both;
+		    border: 2px solid #333;
+		    border-bottom-color: transparent;
+		    background: transparent !important;
+		    display: block;
+       }
+       .rotate{
+       		transform:rotateZ(-180deg);
+       }
+       .rotateAnimate{
+       		animation: rotate-inifint .8s infinite;
+       		-webkit-animation:rotate-inifint .8s infinite;
+       		animation-timing-function: linear;
+       		-webkit-animation-timing-function: linear;
+       }
+       
+       .refreshend-tip{
+       		display:none;
+       		color:#666;
+       		font-size:14px;
+       }
+       @keyframes rotate-inifint{
+       	 from{transform:rotateZ(0deg)}
+       	 to{transform:rotateZ(360deg)}
+       }
+    </style>
+</head>
+<body>
+	<h2 style="width:1em;">请缩小窗口至低于内容高度</h2>
+    <div id="scroller-outer">
+        <div class="scroll-inner">
+            <div class="refresh">
+            	<div class="refresh-tip">
+            		<span class="spring icon iconfont icon-pulldown"></span>
+            	</div>
+            	<div class="refreshend-tip">
+            		更新成功！
+            	</div>
+            </div>
+            <div class="content">
+                <div class="item">测试1</div>
+                <div class="item">测试2</div>
+                <div class="item">测试3</div>
+                <div class="item">测试4</div>
+                <div class="item">测试5</div>
+                <div class="item">测试6</div>
+                <div class="item">测试7</div>
+                <div class="item">测试8</div>
+                <div class="item">测试9</div>
+                <div class="item">测试10</div>
+                <div class="item">测试11</div>
+                <div class="item">测试12</div>
+                <div class="item">测试13</div>
+                <div class="item">测试14</div>
+                <div class="item">测试15</div>
+            </div>
+            <div class="loader">
+                <span class="spring icon iconfont icon-pullup"></span>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

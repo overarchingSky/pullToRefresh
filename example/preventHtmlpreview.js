@@ -1,6 +1,9 @@
 window.addEventListener("load",function(){
 	var js = ['./iscroll.js','./pullToRefresh.js','./init.js'];
-	loadJs(js)
+	setTimeout(function(){
+		loadJs(js)
+	},1000)
+	
 })
 function loadJs(arr){
 	var len = arr.length;

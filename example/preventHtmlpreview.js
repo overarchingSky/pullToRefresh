@@ -1,5 +1,5 @@
 window.addEventListener("load",function(){
-	var js = ['./iscroll.js','./pullToRefresh.js','./init.js'];
+	var js = ['./pullToRefresh.js','./init.js'];
 	setTimeout(function(){
 		loadJs(js)
 	},1000)

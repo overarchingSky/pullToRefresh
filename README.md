@@ -55,58 +55,58 @@ onBeforeLoad:function(){},//可选<br>
 ##### onLoading
 ```
 onLoading:function(){//必选<br>
-//加载数据 <br>
-var scroller = this<br>
-$.ajax({<br>
-...<br>
-...<br>
-success:function(){<br>
-...<br>
-...<br>
-//是否还有更多数据<br>
-scroller.hasMore(true/false)<br>
-//结束加载状态<br>
-scroller._execEvent("onLoadend") <br>
-}<br>
-})<br>
-},<br>
+        //加载数据 <br>
+        var scroller = this<br>
+        $.ajax({
+                ...
+                ...
+                success:function(){
+                        ...
+                        ...
+                        //是否还有更多数据
+                        scroller.hasMore(true/false)
+                        //结束加载状态
+                        scroller._execEvent("onLoadend") 
+                }
+        })
+},
 ```
 ##### onRefreshing
 ```
 onRefreshing:function(){//必选<br>        	
-//刷新<br>
-var scroller = this<br>
-$.ajax({<br>
-...<br>
-...<br>
-success:function(){<br>
-...<br>
-...<br>
-//是否还有更多数据<br>
-this.resetHeight()<br>
-scroller.hasMore(true/false)<br>
-//结束加载状态<br>
-scroller._execEvent("onRefreshend") <br>
-}<br>
-})<br>
-},<br>
+        //刷新
+        var scroller = this
+                $.ajax({
+                ...
+                ...
+                success:function(){
+                        ...
+                        ...
+                        //是否还有更多数据
+                        this.resetHeight()
+                        scroller.hasMore(true/false)
+                        //结束加载状态
+                        scroller._execEvent("onRefreshend")
+                }
+        })
+},
 ```
 ##### onRefreshend
 ```
-onRefreshend:function(){//可选，刷新结束<br>
-this.refreshendTip.innerText = "更新数据**条"<br>
-},<br>
+onRefreshend:function(){//可选，刷新结束
+        this.refreshendTip.innerText = "更新数据**条"
+},
 ```
 ##### onLoadend
 ```
- onLoadend:function(){//可选，加载结束<br>
-<br>
-},<br>
+ onLoadend:function(){//可选，加载结束
+
+},
 ```
 ##### onDrag
 ```
- onDrag:function(){//可选，拖拽<br>
-var scroller = this<br>
-console.log(scroller.y)<br>
-}<br>
+ onDrag:function(){//可选，拖拽
+        var scroller = this
+        console.log(scroller.y)
+}
 ```

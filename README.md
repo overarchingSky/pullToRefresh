@@ -110,3 +110,5 @@ onRefreshend:function(){//可选，刷新结束
         console.log(scroller.y)
 }
 ```
+##### Tip：
+事件回调方法都被硬绑了this，在其内部，this指向本插件实例

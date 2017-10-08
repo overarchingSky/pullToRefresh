@@ -172,23 +172,24 @@
 	        },
 	        onRefreshing:function(){//必选        	
 	            //refresh
+	            var scroller = this
 	            setTimeout(function(){
 	            	page = 1
-		           this.content.innerHTML = ""
-		           this.resetHeight()
+		           scroller.content.innerHTML = ""
+		           scroller.resetHeight()
 		           var res = data.entity.slice((page-1) * pageSize,page * pageSize - 1)
 		           for(var i =0; i < res.length; i++){
 			           	var item = document.createElement("div")
 			           	item.className = "item"
 			           	item.innerHTML = res[i]
-			           	this.content.appendChild(item)
+			           	scroller.content.appendChild(item)
 		           }
 		           //this.refreshendTip.innerText = "更新数据15条"
-		           this.hasMore(page * pageSize >= data.total)
-		           this._execEvent("onRefreshend")
+		           scroller.hasMore(page * pageSize >= data.total)
+		           scroller._execEvent("onRefreshend")
 		           page++
             		
-            	}.bind(this),2000) 
+            	},2000) 
 	        },
 	        onRefreshend:function(){//可选
 	        	this.refreshendTip.innerText = "更新数据**条"

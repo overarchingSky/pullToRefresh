@@ -55,7 +55,8 @@
 		scroller.loaderSpring = $(".loader .spring")
 		scroller.loaderLayer = $(".loader")
 		scroller.refreshTip = $(".refresh-tip")
-		scroller.refreshLayer.style = "width:100%;top:-"+scroller.refreshTip.offsetHeight + "px"
+		scroller.refreshLayer.style.width = "100%"
+		scroller.refreshLayer.style.top = "-" + scroller.refreshTip.offsetHeight + "px"
 		scroller.content = $(".content")
 		scroller.isMore = true
 		
